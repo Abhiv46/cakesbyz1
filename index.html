@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bakes by Z - Premium custom cakes in UK. Freshly baked, beautifully decorated cakes for all occasions. Order online for delivery across UK.">
+    <meta name="keywords" content="cakes UK, custom cakes, birthday cakes, wedding cakes, cake delivery UK, online cake order, Bakes by Z">
+    <title>Bakes by Z | Premium Custom Cakes in UK</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🍰</span>
+                <span class="logo-text">Bakes by Z</span>
+            </a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cakes">Our Cakes</a></li>
+                <li><a href="#custom">Custom Order</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#order" class="btn-order">Order Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Artisanal Cakes <span class="highlight">Crafted with Love</span></h1>
+                <p class="hero-subtitle">Freshly baked custom cakes delivered across the UK. Perfect for birthdays, weddings, and all celebrations.</p>
+                <div class="hero-buttons">
+                    <a href="#cakes" class="btn btn-primary">Explore Cakes</a>
+                    <a href="#custom" class="btn btn-secondary">Custom Order</a>
+                </div>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Free Delivery in London</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <span>24/7 Online Orders</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-award"></i>
+                        <span>Premium Quality</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beautiful custom cake from Bakes by Z">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cakes -->
+    <section class="section cakes-section" id="cakes">
+        <div class="container">
+            <h2 class="section-title">Our Signature <span class="highlight">Cakes</span></h2>
+            <p class="section-subtitle">Handcrafted perfection for every occasion</p>
+            
+            <div class="categories">
+                <button class="category-btn active" data-category="all">All Cakes</button>
+                <button class="category-btn" data-category="birthday">Birthday</button>
+                <button class="category-btn" data-category="wedding">Wedding</button>
+                <button class="category-btn" data-category="anniversary">Anniversary</button>
+                <button class="category-btn" data-category="cupcakes">Cupcakes</button>
+            </div>
+            
+            <div class="cakes-grid">
+                <!-- Cake items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Order Section -->
+    <section class="section custom-section" id="custom">
+        <div class="container">
+            <h2 class="section-title">Create Your <span class="highlight">Dream Cake</span></h2>
+            <p class="section-subtitle">Customize every detail to match your vision</p>
+            
+            <div class="custom-form">
+                <div class="form-step active" id="step1">
+                    <h3>Step 1: Choose Cake Type</h3>
+                    <div class="options-grid">
+                        <div class="option-card" data-type="Round">
+                            <div class="option-icon">○</div>
+                            <h4>Round Cake</h4>
+                            <p>Classic round shape, perfect for birthdays</p>
+                        </div>
+                        <div class="option-card" data-type="Sheet">
+                            <div class="option-icon">□</div>
+                            <h4>Sheet Cake</h4>
+                            <p>Rectangular, ideal for large gatherings</p>
+                        </div>
+                        <div class="option-card" data-type="Tiered">
+                            <div class="option-icon">△</div>
+                            <h4>Tiered Cake</h4>
+                            <p>Multi-layer cake for weddings & special events</p>
+                        </div>
+                        <div class="option-card" data-type="Cupcakes">
+                            <div class="option-icon">🧁</div>
+                            <h4>Cupcakes</h4>
+                            <p>Individual portions, variety of flavors</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-next" onclick="nextStep(2)">Next: Choose Flavor</button>
+                </div>
+                
+                <div class="form-step" id="step2">
+                    <h3>Step 2: Choose Flavor</h3>
+                    <div class="flavor-options">
+                        <label class="flavor-option">
+                            <input type="radio" name="flavor" value="Vanilla">
+                            <span class="custom-radio"></span>
+                            <span class="flavor-text">Classic Vanilla</span>
+                        </label>
+                        <label class="flavor-option">
+                            <input type="radio" name="flavor" value="Chocolate">
+                            <span class="custom-radio"></span>
+                            <span class="flavor-text">Rich Chocolate</span>
+                        </label>
+                        <label class="flavor-option">
+                            <input type="radio" name="flavor" value="Red Velvet">
+                            <span class="custom-radio"></span>
+                            <span class="flavor-text">Red Velvet</span>
+                        </label>
+                        <label class="flavor-option">
+                            <input type="radio" name="flavor" value="Carrot">
+                            <span class="custom-radio"></span>
+                            <span class="flavor-text">Carrot Cake</span>
+                        </label>
+                    </div>
+                    <div class="form-buttons">
+                        <button class="btn btn-back" onclick="prevStep(1)">Back</button>
+                        <button class="btn btn-next" onclick="nextStep(3)">Next: Choose Size</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" id="step3">
+                    <h3>Step 3: Final Details</h3>
+                    <div class="form-group">
+                        <label for="size">Cake Size:</label>
+                        <select id="size">
+                            <option value="Small (Serves 8-10)">Small (Serves 8-10) - £25</option>
+                            <option value="Medium (Serves 15-20)">Medium (Serves 15-20) - £40</option>
+                            <option value="Large (Serves 25-30)">Large (Serves 25-30) - £60</option>
+                            <option value="X-Large (Serves 40+)">X-Large (Serves 40+) - £85</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message on Cake:</label>
+                        <input type="text" id="message" placeholder="Happy Birthday!">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Delivery Date:</label>
+                        <input type="date" id="date">
+                    </div>
+                    <div class="form-buttons">
+                        <button class="btn btn-back" onclick="prevStep(2)">Back</button>
+                        <button class="btn btn-primary" onclick="submitOrder()">Complete Order</button>
+                    </div>
+                </div>
+                
+                <div class="form-step" id="step4">
+                    <div class="success-message">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Order Submitted Successfully!</h3>
+                        <p>Thank you for your custom cake order. We'll contact you within 24 hours to confirm details.</p>
+                        <button class="btn btn-primary" onclick="resetForm()">Place Another Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About <span class="highlight">Bakes by Z</span></h2>
+                <p>Founded in 2015 by master baker Zara, Bakes by Z brings artisanal cake craftsmanship to homes across the UK. What started as a small home bakery has grown into a beloved local business known for exceptional quality and creative designs.</p>
+                <p>Every cake is crafted using the finest ingredients, with attention to detail that makes each creation unique. We believe cakes should not only taste delicious but also be beautiful works of art that make your celebrations unforgettable.</p>
+                <div class="stats">
+                    <div class="stat">
+                        <h3>2,500+</h3>
+                        <p>Cakes Baked</p>
+                    </div>
+                    <div class="stat">
+                        <h3>98%</h3>
+                        <p>Customer Satisfaction</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>UK Cities Served</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Baker decorating a cake">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our <span class="highlight">Customers Say</span></h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The wedding cake from Bakes by Z was absolutely stunning! Not only beautiful but delicious too. All our guests were raving about it."</p>
+                    <div class="customer">
+                        <h4>Sarah Johnson</h4>
+                        <span>London</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"I've ordered birthday cakes from Bakes by Z for three years now. Always fresh, creative, and delivered right on time. Highly recommend!"</p>
+                    <div class="customer">
+                        <h4>Michael Chen</h4>
+                        <span>Manchester</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"The custom cake for my parents' anniversary exceeded all expectations. The attention to detail was incredible. Thank you Bakes by Z!"</p>
+                    <div class="customer">
+                        <h4>Emma Williams</h4>
+                        <span>Birmingham</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in <span class="highlight">Touch</span></h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Our Location</h4>
+                            <p>123 Baker Street, London, UK</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>+44 20 7123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>orders@bakesbyz.co.uk</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Opening Hours</h4>
+                            <p>Mon-Fri: 8am-8pm<br>Sat-Sun: 9am-6pm</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">🍰</span>
+                        <span class="logo-text">Bakes by Z</span>
+                    </a>
+                    <p>Artisanal cakes crafted with passion, delivered with care across the UK.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#cakes">Cakes</a></li>
+                        <li><a href="#custom">Custom Order</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#custom">Wedding Cakes</a></li>
+                        <li><a href="#custom">Birthday Cakes</a></li>
+                        <li><a href="#custom">Corporate Events</a></li>
+                        <li><a href="#custom">Cake Subscription</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for exclusive offers and cake inspirations</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bakes by Z. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+                <p>Website designed for optimal SEO performance</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
