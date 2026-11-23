@@ -1,24 +1,26 @@
-# Bakes by Z - Cake Shop Website
+# Bakes by Z — Cake Shop Website
 
-A modern, responsive website for Bakes by Z cake shop with online ordering functionality.
+A modern, responsive static website for **Bakes by Z**, a premium custom cake shop in the UK, with online ordering functionality.
 
-## Features
-- Responsive design for all devices
-- Online cake ordering system
-- Cake gallery with filtering
-- Custom cake order builder
-- SEO optimized for UK market
-- Contact form and social media integration
+## Structure
 
-## Technologies Used
-- HTML5
-- CSS3 (Flexbox, Grid, CSS Variables)
-- JavaScript (ES6+)
-- Font Awesome Icons
-- Google Fonts
+| File / folder | Purpose |
+| --- | --- |
+| `index.html` | Homepage — "Bakes by Z \| Premium Custom Cakes in UK" |
+| `style.css` | Site styling |
+| `script.js` | Interactivity and ordering flow |
+| `assets/` | Cake photography (`bakesbyZ.jpeg`) |
 
-## Setup Instructions
+## Running locally
 
-1. Clone the repository:
+Open `index.html` in a browser, or serve the folder with any static server, e.g.:
+
 ```bash
-git clone https://github.com/yourusername/bakes-by-z.git
+npx serve .
+```
+
+No build step or dependencies are required.
+
+## Note
+
+Two copies of this site exist (`cakesbyz` and `cakesbyz1`) with identical contents — see the 23 Nov 2026 audit recommendation to keep one canonical copy.
